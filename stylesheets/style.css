@@ -1,0 +1,148 @@
+/* --------------------------------------- */
+/* Basic Setup */
+/* --------------------------------------- */
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: none;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-decoration: none;
+  line-height: 1.25em;
+}
+
+/* --------------------------------------- */
+/* Main Section */
+/* --------------------------------------- */
+main.parallax {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/assets/img/wine_store.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .page-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .page-desc p {
+  color: #fff;
+  font-size: 100px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 1em;
+  text-shadow: 3px 3px #000;
+}
+
+main header {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+main header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+
+main header .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0;
+  width: 100%;
+}
+
+main header .nav-wrapper .logo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main header .nav-wrapper .logo-wrapper a {
+  font-size: 40px;
+  text-shadow: 2px 2px #000;
+}
+
+main header .nav-wrapper .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main header ul li {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-shadow: 2px 2px #000;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  text-align: right;
+}
+
+main header ul :hover {
+  color: #D980FA;
+}
+
+/* --------------------------------------- */
+/* Section - Main Image */
+/* --------------------------------------- */
+.portfolio .page-title {
+  text-align: center;
+  padding: 100px 8%;
+}
+/*# sourceMappingURL=style.css.map */
