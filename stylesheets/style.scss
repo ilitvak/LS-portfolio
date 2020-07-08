@@ -10,7 +10,7 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     transition: all .5s;
-    font-family: 'Lato', sans-serif;
+    font-family: 'futura-pt-bold', sans-serif;
     font-weight: 300;
   }
 
@@ -49,7 +49,7 @@
 
 main.parallax {
   height: 100vh;
-  background-image: url('/assets/img/wine_store.jpg');
+  background-image: url('/assets/img/main_image.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -65,7 +65,7 @@ main {
 
     p {
       color: #fff;
-      font-size: 100px;
+      font-size: 3em;
       text-transform: capitalize;
       letter-spacing: 0px;
       line-height: 1em;
@@ -127,17 +127,25 @@ main {
 
     a {
       &:hover {
-        .fa-arrow-down:before {
+        .arrow {
           display: none;
         }
         span {
           display: block;
         }
       }
-    }
-
-    .fa-arrow-down:before {
-      font-size: 35px;
+      .arrow {
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 9px;
+        font-size: 35px;
+        color: #fff;
+      }
+      .down {
+         transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
     }
     span {
       display: none;
@@ -145,12 +153,44 @@ main {
   }
 }
 
+
+.back-to-top-container {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  background-color: #a29bfe;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  transition: none;
+  z-index: 10000;
+    i {
+      display: block;
+      position: relative;
+      top: 18px;
+      left: 17px;
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      padding: 6px;
+      font-size: 35px;
+      color: #fff;
+
+    }
+
+    .up {
+       transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+}
+
+
 @keyframes MoveUpDown {
   0%, 100% {
-    bottom: 50px;
+    bottom: 40px;
   }
   50% {
-    bottom: 10px;
+    bottom: 20px;
   }
 }
 
