@@ -10,7 +10,7 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     transition: all .5s;
-    font-family: 'futura-pt-bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
   }
 
@@ -28,10 +28,6 @@
   li {
     list-style-type: none;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Prata', serif;
-   }
   
   h1 {
     font-size: 48px;
@@ -47,13 +43,21 @@
 /* Main Section */
 /* --------------------------------------- */
 
-main.parallax {
+
+.parallax {
   height: 100vh;
-  background-image: url('/assets/img/main_image.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+main.home {
+  background-image: url('/assets/img/wine_store.jpg');
+}
+
+main.dvino {
+  background-image: url('/assets/img/macbook.jpg');
 }
 
 main {
@@ -69,7 +73,7 @@ main {
       text-transform: capitalize;
       letter-spacing: 0px;
       line-height: 1em;
-      text-shadow: 3px 3px #000;
+      //text-shadow: 3px 3px #000;
     } 
   }
   header {
@@ -93,7 +97,7 @@ main {
           width: 100%;
           a {
             font-size: 40px;
-            text-shadow: 2px 2px #000;
+            //text-shadow: 2px 2px #000;
           }
         }
         .nav-items {
@@ -108,9 +112,13 @@ main {
       justify-content: space-around;
       li {
         justify-content: space-around;
-        text-shadow: 2px 2px #000;
+        //text-shadow: 2px 2px #000;
         flex: 3;
         text-align: right;
+        
+        a {
+          font-weight: bold;
+        }
       }
       :hover {
         color: #D980FA;
@@ -120,7 +128,7 @@ main {
 
   .button-scroll-down {
     position: absolute;
-    bottom: 100px;
+    bottom: 20px;
     width: 100%;
     text-align: center;
     animation: MoveUpDown 1.5s linear infinite;
@@ -164,11 +172,13 @@ main {
   height: 50px;
   border-radius: 5px;
   transition: none;
+  cursor: pointer;
   z-index: 10000;
+
     i {
       display: block;
       position: relative;
-      top: 18px;
+      top: 20px;
       left: 17px;
       border: solid #fff;
       border-width: 0 3px 3px 0;
@@ -184,18 +194,36 @@ main {
     }
 }
 
+/* --------------------------------------- */
+/* Section - Services */
+/* --------------------------------------- */
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 40px;
-  }
-  50% {
-    bottom: 20px;
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+
+  .grid-box {
+    width: 30%;
+    text-align: center;
+
+    .credit {
+      display: none;
+    }
+    
+    img {
+      width: 59px;
+    }
+
+    &:first-child {
+      margin-bottom: 100px;
+    }
   }
 }
 
 /* --------------------------------------- */
-/* Section - Main Image */
+/* Section - Portfolio*/
 /* --------------------------------------- */
 
 .page-title {
@@ -284,6 +312,61 @@ section.section-divider-parallax {
       font-size: 20px;
       z-index: 1000;
     }
-
-
   }
+
+
+/* --------------------------------------- */
+/* Footer Section */
+/* --------------------------------------- */
+
+$blue: #405DE6;
+$lavender: #5851DB;
+$purple: #833AB4;
+$maroon: #C13584;
+$pink: #E1306C;
+$red: #FD1D1D;
+$peach: #F56040;
+$orange: #F77737;
+$mandarin: #FCAF45;
+$yellow: #FFDC80;
+
+.fa-pinterest, .fa-pinterest-square {
+  color: #2d3436;
+}
+
+.fa-instagram {
+  color:  #2d3436;
+}
+
+
+.fa-linkedin, .fa-linkedin-square {
+  color: #2d3436;
+}
+
+footer {
+  .social-media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 3em;
+    a {
+      margin: 0 10px;
+      i.fa-instagram {
+        &:hover {
+          color: #E1306C;
+        }
+      }
+      i.fa-linkedin-square {
+        &:hover {
+          color: #74b9ff;
+        }
+      }
+      i.fa-pinterest-square {
+        &:hover {
+          color: #ff7675;
+        }
+      }
+    }
+  }
+}
+

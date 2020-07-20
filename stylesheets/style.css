@@ -10,7 +10,7 @@
   box-sizing: border-box;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-family: 'futura-pt-bold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
@@ -28,10 +28,6 @@ li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Prata', serif;
-}
-
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -45,13 +41,20 @@ h1 {
 /* --------------------------------------- */
 /* Main Section */
 /* --------------------------------------- */
-main.parallax {
+.parallax {
   height: 100vh;
-  background-image: url("/assets/img/main_image.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+main.home {
+  background-image: url("/assets/img/wine_store.jpg");
+}
+
+main.dvino {
+  background-image: url("/assets/img/macbook.jpg");
 }
 
 main .page-desc {
@@ -68,7 +71,6 @@ main .page-desc p {
   text-transform: capitalize;
   letter-spacing: 0px;
   line-height: 1em;
-  text-shadow: 3px 3px #000;
 }
 
 main header {
@@ -106,7 +108,6 @@ main header .nav-wrapper .logo-wrapper {
 
 main header .nav-wrapper .logo-wrapper a {
   font-size: 40px;
-  text-shadow: 2px 2px #000;
 }
 
 main header .nav-wrapper .nav-items {
@@ -131,11 +132,14 @@ main header ul {
 main header ul li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-shadow: 2px 2px #000;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
   text-align: right;
+}
+
+main header ul li a {
+  font-weight: bold;
 }
 
 main header ul :hover {
@@ -144,7 +148,7 @@ main header ul :hover {
 
 main .button-scroll-down {
   position: absolute;
-  bottom: 100px;
+  bottom: 20px;
   width: 100%;
   text-align: center;
   -webkit-animation: MoveUpDown 1.5s linear infinite;
@@ -188,13 +192,14 @@ main .button-scroll-down span {
   border-radius: 5px;
   -webkit-transition: none;
   transition: none;
+  cursor: pointer;
   z-index: 10000;
 }
 
 .back-to-top-container i {
   display: block;
   position: relative;
-  top: 18px;
+  top: 20px;
   left: 17px;
   border: solid #fff;
   border-width: 0 3px 3px 0;
@@ -208,26 +213,39 @@ main .button-scroll-down span {
   -webkit-transform: rotate(-135deg);
 }
 
-@-webkit-keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 40px;
-  }
-  50% {
-    bottom: 20px;
-  }
+/* --------------------------------------- */
+/* Section - Services */
+/* --------------------------------------- */
+.services-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 40px;
-  }
-  50% {
-    bottom: 20px;
-  }
+.services-container .grid-box {
+  width: 30%;
+  text-align: center;
+}
+
+.services-container .grid-box .credit {
+  display: none;
+}
+
+.services-container .grid-box img {
+  width: 59px;
+}
+
+.services-container .grid-box:first-child {
+  margin-bottom: 100px;
 }
 
 /* --------------------------------------- */
-/* Section - Main Image */
+/* Section - Portfolio*/
 /* --------------------------------------- */
 .page-title {
   text-align: center;
@@ -320,5 +338,47 @@ section.section-divider-parallax h2 {
   color: #fff;
   font-size: 20px;
   z-index: 1000;
+}
+
+/* --------------------------------------- */
+/* Footer Section */
+/* --------------------------------------- */
+.fa-pinterest, .fa-pinterest-square {
+  color: #2d3436;
+}
+
+.fa-instagram {
+  color: #2d3436;
+}
+
+.fa-linkedin, .fa-linkedin-square {
+  color: #2d3436;
+}
+
+footer .social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-bottom: 3em;
+}
+
+footer .social-media-container a {
+  margin: 0 10px;
+}
+
+footer .social-media-container a i.fa-instagram:hover {
+  color: #E1306C;
+}
+
+footer .social-media-container a i.fa-linkedin-square:hover {
+  color: #74b9ff;
+}
+
+footer .social-media-container a i.fa-pinterest-square:hover {
+  color: #ff7675;
 }
 /*# sourceMappingURL=style.css.map */
